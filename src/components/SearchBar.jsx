@@ -6,11 +6,9 @@ const SearchBar = (props) => {
 
     async function SendPuppySearch(name){
         try{
-            console.log(props.allPlayers[0].name)
-            console.log("Puppy Found");
-
-            props.allPlayers.map((props.allPlayers[index]))
-
+            props.allPlayers.filter((player, index) => {
+                player.name.includes(name) ? (name): console.log("name NOT found")
+            })
             setName(" ")
         } catch (error) {
             console.log(error);
