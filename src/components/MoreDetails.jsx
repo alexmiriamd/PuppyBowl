@@ -6,4 +6,4 @@ const MoreDetails =(props)=>{
 
     )
 }
-export default MoreDetail
+export default MoreDetails

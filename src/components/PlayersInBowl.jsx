@@ -15,7 +15,7 @@ const PlayersInBowl = (props) => {
                                 {player.name}
                             </h3>
                             <img src = {player.imageUrl} className = "puppyPics"/>
-                            <button>
+                            <button player = {player}>
                                 More Details 
                             </button>
                         </div>    
