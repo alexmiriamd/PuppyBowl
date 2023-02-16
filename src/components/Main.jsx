@@ -22,7 +22,7 @@ function Main(){
 
     return(
         <div id="main">
-            <Navbar />
+            <Navbar allPlayers = {allPlayers}/>
             <PlayersInBowl allPlayers = {allPlayers}/>
         </div>
     )

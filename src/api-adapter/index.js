@@ -4,7 +4,6 @@ export const fetchPlayers = async ()=>{
     try{
         const response = await fetch(BASE_URL)
         const result = await response.json()
-        console.log(result)
         const players = result.data.players
         return players
     } catch (error){

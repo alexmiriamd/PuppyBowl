@@ -1,9 +1,10 @@
 import React from "react";
+import SearchBar from "./SearchBar";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div id="navbar">
-      <h2> I am navbar</h2>
+      <SearchBar allPlayers = {props.allPlayers}/>
     </div>
   );
 };
