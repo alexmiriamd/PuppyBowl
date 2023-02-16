@@ -11,3 +11,13 @@ body {
     max-height: 10%;
     min-height: 40px;
 }
+
+.puppyPics {
+    height: 300px;
+}
+
+.puppyCard {
+    border: solid black 2px;
+    margin: 1rem;
+    padding: 1rem;
+}
