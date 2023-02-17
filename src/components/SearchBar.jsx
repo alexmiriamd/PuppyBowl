@@ -5,11 +5,14 @@ const SearchBar = (props) => {
     const [name , setName] = useState("");
 
     async function SendPuppySearch(name){
+        
         try{
-            props.allPlayers.filter((player, index) => {
-                player.name.includes(name) ? (name): console.log("name NOT found")
+            const filteredArray = props.allPlayers.filter((player, index) => {
+                return player.name === name;
             })
-            setName(" ")
+            setName(" ");
+            props.setUpdatePlayers(filteredArray);
+
         } catch (error) {
             console.log(error);
         }
