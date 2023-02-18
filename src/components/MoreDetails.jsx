@@ -4,32 +4,43 @@ import { fetchPlayers } from '../api-adapter';
 
 const MoreDetails = (props)=>{
 
-    // const [allPlayers, setAllPlayers] = useState([])
+    const [allPlayers, setAllPlayers] = useState([])
     
-    // async function getAllPlayers(){
-    //     try{
-    //         const data = await fetchPlayers();
-    //         setAllPlayers(data);
+    async function getAllPlayers(){
+        try{
+            const data = await fetchPlayers();
+            setAllPlayers(data);
             
-    //     } catch (err){
-    //         console.log(err);
-    //     }
-    // }
+        } catch (err){
+            console.log(err);
+        }
+    }
 
-    // useEffect(() => {
-    //     getAllPlayers();
-    // }, []);
+    useEffect(() => {
+        getAllPlayers();
+    }, []);
 
-    // let { id } = useParams();
+    let { id } = useParams();
 
-    // // // allPlayers.filter((player, idx)=>{
-    // //     console.log(player)
-    // //     player.id.includes(id) ? console.log("id matches"): <h1>Nothing</h1>
-
-    // // })
     return(
     <div>
+        {allPlayers.map((player, idx)=>{
         
+        console.log(id)
+        if(player.id == id){
+            return(
+                <div className="puppyCard" key={`Puppy ID is: ${idx}`}>
+                            <h3>
+                                {player.name}
+                            </h3>
+                            <img src = {player.imageUrl} className = "puppyPics"/>
+                            
+                        </div>    
+            )
+        }
+
+    })}
+
         <Link to="http://localhost:3000/">Go Back</Link>
     </div>
     )

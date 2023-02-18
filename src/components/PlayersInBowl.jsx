@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
-import MoreDetails from './MoreDetails';
+
 
 const PlayersInBowl = (props) => {
     const allPlayers = props.allPlayers;
@@ -41,7 +41,6 @@ const PlayersInBowl = (props) => {
                 })
                 :<h1> loading... </h1>
             }
-            <MoreDetails allPlayers = {props.allPlayers}/>
             <Outlet />
         </div>
             )
