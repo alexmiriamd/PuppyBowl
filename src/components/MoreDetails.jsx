@@ -23,25 +23,30 @@ const MoreDetails = (props)=>{
     let { id } = useParams();
 
     return(
-    <div>
+    <div className = "moreDetailsContainer">
         {allPlayers.map((player, idx)=>{
         
         console.log(id)
         if(player.id == id){
             return(
-                <div className="puppyCard" key={`Puppy ID is: ${idx}`}>
-                            <h3>
-                                {player.name}
-                            </h3>
-                            <img src = {player.imageUrl} className = "puppyPics"/>
-                            
-                        </div>    
+                <div className= "contentContainer">
+                    <div className="puppyCard">
+                                <h3 className = "puppyName">
+                                    {player.name}
+                                </h3>
+                                <img src = {player.imageUrl} className = "moreDetailPic"/>
+                                <ul>
+                                    <li> Breed: {player.breed} </li>
+                                    <li> Status: {player.status} </li>
+                                    <li> Team: {player.teamId} </li>
+                                </ul>
+                                
+                    </div>  
+            </div>  
             )
         }
-
-    })}
-
-        <Link to="http://localhost:3000/">Go Back</Link>
+    })}   
+    <Link to="http://localhost:3000/" className="goBack">Go Back</Link>
     </div>
     )
 }

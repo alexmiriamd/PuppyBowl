@@ -20,7 +20,54 @@ body {
     border: solid black 2px;
     margin: 1rem;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
+.contentContainer{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.puppyName{
+    font-size: 25px;
+}
+.moreDetailsButton{
+    margin: 15px;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+li{
+    padding: 2.5px;
+}
+
+ul{
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.moreDetailsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.moreDetailPic{
+    height:500px;
+}
+
 #searchBar{
     margin-left: 25px;
+}
+
+#main > div.contentContainer > div:nth-child(9) > img{
+    width: 200px;
+}
+#main > div.contentContainer > div:nth-child(12) > img{
+    width: 200px;
 }
