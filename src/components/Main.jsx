@@ -21,6 +21,7 @@ function Main(){
     useEffect(() => {
         getAllPlayers();
     }, []);
+    
     return(
         <div id="main">
             <Navbar allPlayers = {allPlayers} setUpdatePlayers = {setUpdatePlayers}/>
