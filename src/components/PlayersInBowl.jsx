@@ -41,6 +41,7 @@ const PlayersInBowl = (props) => {
                 })
                 :<h1> loading... </h1>
             }
+            <MoreDetails allPlayers = {props.allPlayers}/>
             <Outlet />
         </div>
             )

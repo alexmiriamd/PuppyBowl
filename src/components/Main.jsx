@@ -21,12 +21,10 @@ function Main(){
     useEffect(() => {
         getAllPlayers();
     }, []);
-
     return(
         <div id="main">
             <Navbar allPlayers = {allPlayers} setUpdatePlayers = {setUpdatePlayers}/>
             <PlayersInBowl allPlayers = {allPlayers} updatePlayers = {updatePlayers}/>
-            <MoreDetails allPlayers = {allPlayers}/>
             <Outlet/>
         </div>
     )
