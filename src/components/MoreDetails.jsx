@@ -46,7 +46,7 @@ const MoreDetails = (props)=>{
             )
         }
     })}   
-    <Link to="http://localhost:3000/" className="goBack">Go Back</Link>
+    <Link to="/" className="goBack">Go Back</Link>
     </div>
     )
 }
