@@ -19,7 +19,7 @@ const PlayersInBowl = (props) => {
                             </h3>
                             <img src = {updatePlayers[0].imageUrl} className = "puppyPics"/>
                             <div className = "moreDetailsButton">
-                            <Link to = {`http://localhost:3000/player/${updatePlayers[0].id}`}>
+                            <Link to = {`player/${updatePlayers[0].id}`}>
                             <button >More Details</button>
                             </Link>
                             </div>
@@ -34,7 +34,7 @@ const PlayersInBowl = (props) => {
                             </h3>
                             <img src = {player.imageUrl} className = "puppyPics"/>
                             <div className = "moreDetailsButton">
-                            <Link to = {`http://localhost:3000/player/${player.id}`}>
+                            <Link to = {`player/${player.id}`}>
                             <button >More Details</button>
                             </Link>
                             </div>
